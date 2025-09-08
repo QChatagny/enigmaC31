@@ -1,1 +1,4 @@
 #enigma1
+
+def printf():
+  print("hello world")
