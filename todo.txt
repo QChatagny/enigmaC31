@@ -1,0 +1,8 @@
+
+- ouvrir repo X
+- separer le programme
+  1) input
+    - entrer 4 clés 
+    - entrer 4 modif 
+
+- 
