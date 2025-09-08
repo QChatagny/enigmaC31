@@ -4,5 +4,9 @@
   1) input
     - entrer 4 clés 
     - entrer 4 modif 
-
-- 
+    - encoder ou decoder ?
+    - quit ?
+  
+  2) output
+    -  sortie -> message crypté ou décrypté
+    - quit ? ou loop nouveau message
