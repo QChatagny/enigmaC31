@@ -18,13 +18,13 @@ def getReflecteurDecalageTEST():
   message = "PASSED" if testedDecalage == 3 else "FAILED"
   print(message)
 
+
 #FUNCTION#################################
 #Def:
 #Params:
 #return:
 #rtype:
 #########################################
-def applyReflecteur(lettre, decalage):
+def applyDecalage(lettre, decalage):
   intLettre = ord(lettre.upper()) - 65
   return (chr(((intLettre + decalage) % 26) + 65))
-
