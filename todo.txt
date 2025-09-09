@@ -10,3 +10,13 @@
   2) output
     -  sortie -> message crypté ou décrypté
     - quit ? ou loop nouveau message
+
+  3) algorithme
+    - reflecteur
+    - clés
+    - assembler l'algorithme
+    - vérifier les parametres et types
+  
+  4) separer en fichier 
+  5) assembler le main
+  
