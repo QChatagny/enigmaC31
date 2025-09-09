@@ -28,3 +28,12 @@ def getReflecteurDecalageTEST():
 def applyDecalage(lettre, decalage):
   intLettre = ord(lettre.upper()) - 65
   return (chr(((intLettre + decalage) % 26) + 65))
+
+def reflexion(reflecteur, contenu):
+  contenuReflechit = []
+  decalage = getReflecteurDecalage(reflecteur)
+
+  for lettre in contenu:
+    contenuReflechit.append(applyDecalage(lettre, decalage))
+    
+  return contenuReflechit

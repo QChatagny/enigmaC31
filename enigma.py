@@ -5,25 +5,7 @@ import decalage as d
 
 #ENCODE
 
-#FUNCTION#################################
-#Def:
-#Params:
-#return:
-#rtype:
-#########################################
-def moteur(contenu, cles, decs, ref, isEncoding):
-  if (isEncoding):
-    encode(cles, decs, ref)
-  else:
-    decode(cles, decs, ref)
-
-#FUNCTION#################################
-#Def:
-#Params:
-#return:
-#rtype:
-#########################################
-def encode(cles, contenu, Ref):
+def decalage(cles, contenu):
   contenuEncode = []
   contenuEncodeTemp = []
 
@@ -37,8 +19,25 @@ def encode(cles, contenu, Ref):
 
       contenuEncode = contenuEncodeTemp
       contenuEncodeTemp = []
-  
+
   return contenuEncode
+
+  
+
+#FUNCTION#################################
+#Def:
+#Params:
+#return:
+#rtype:
+#########################################
+def encode(cles, contenu, ref):
+  contenuEncode = decalage(cles,contenu)
+  contenuEncode = r.reflexion(contenuEncode, ref)
+  clesDecales = decale(cles)
+  contenuEncode = decalage(clesDecales, contenuEncode)
+
+  return contenuEncode
+
 
 def encodeTEST():
   cles = [1,1,1,1]
@@ -59,6 +58,18 @@ encodeTEST()
 def decode(Cles, Decs, ref):
   pass
 
+
+#FUNCTION#################################
+#Def:
+#Params:
+#return:
+#rtype:
+#########################################
+def moteur(contenu, cles, decs, ref, isEncoding):
+  if (isEncoding):
+    encode(cles, decs, ref)
+  else:
+    decode(cles, decs, ref)
 
 
 
