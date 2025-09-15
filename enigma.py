@@ -5,23 +5,28 @@
 # VARIABLES
 valeurBaseCles = []
 valeurDecalage = []
-messageCode = ""
 messageDecoder = ""
 # reponseValide = False
 nombreCles = ["1er", "2e", "3e", "4e"]
 
-def encoder_Affichage():
+def Affichage():
   iterationCles = 0
   while iterationCles <= 3:
-    tempCles = int(input(f"Quelle est la valeur de base de la {nombreCles[iterationCles]} cles ? "))
+    tempCles = int(input(f"Quelle est la valeur de base de la {nombreCles[iterationCles]} cles ? \n"))
+    tempBase = int(input(f"Quelle est l'itération de la {nombreCles[iterationCles]} cles ? \n"))
     valeurBaseCles.append(tempCles)
+    valeurDecalage.append(tempBase)
     iterationCles += 1
   print(valeurBaseCles)
+  print(valeurDecalage)
 
-    
+def messageCoder():
+  messageCodetemp = str(input("Quelle est le message que vous vouler encoder ?: "))
+  return messageCodetemp
 
-def decoder_Affichage():
-  print("zeub")
+def messagerDecoder():
+  messageCodetemp = str(input("Quelle est le message que vous vouler décrypter ?: "))
+  return messageCodetemp
 
 def question_de_depart():
   reponseValide = False
@@ -32,9 +37,11 @@ def question_de_depart():
     if rep == 'q':
       quitter = True
     elif rep == 'e':
-      encoder_Affichage()
+      Affichage()
+      messageCode = messageCoder()
     elif rep == 'd':
-      decoder_Affichage()
+      Affichage()
+      messageCode = messageDecoder
     else:
       reponseValide = False
       print("Pas un choix valide ressayer \n\n")
