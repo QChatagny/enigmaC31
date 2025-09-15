@@ -11,9 +11,12 @@ reponseValide = True
 nombreCles = ["1er", "2e", "3e", "4e"]
 
 def encoder_Affichage():
-  while nombreCles <= 3:
-    iterationCles = 0
-    int(input(print(f"Quelle est la valeur de base de la {nombreCles[iterationCles]} ? ")))
+  iterationCles = 0
+  while iterationCles <= 3:
+    tempCles = int(input(print(f"Quelle est la valeur de base de la {nombreCles[iterationCles]} ? ")))
+    valeurBaseCles.append(tempCles)
+    iterationCles += 1
+
     
 
 def decoder_Affichage():
